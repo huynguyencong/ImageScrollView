@@ -12,6 +12,8 @@ public class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
     static let kZoomInFactorFromMinWhenDoubleTap: CGFloat = 2
     
+    var subViewsLaidOut: Bool = false
+    
     var zoomView: UIImageView? = nil
     var imageSize: CGSize = CGSizeZero
     private var pointToCenterAfterResize: CGPoint = CGPointZero
@@ -87,6 +89,11 @@ public class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         else {
             zoomView!.frame = frameToCenter
         }
+        
+        if !subViewsLaidOut {
+            setMaxMinZoomScalesForCurrentBounds()
+            subViewsLaidOut = true
+        }
     }
     
     private func prepareToResize() {
@@ -159,14 +166,15 @@ public class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ImageScrollView.doubleTapGestureRecognizer(_:)))
         tapGesture.numberOfTapsRequired = 2
         zoomView!.addGestureRecognizer(tapGesture)
-        
         configureImageForSize(image.size)
     }
     
     private func configureImageForSize(size: CGSize) {
         imageSize = size
         contentSize = imageSize
-        setMaxMinZoomScalesForCurrentBounds()
+        if subViewsLaidOut {
+            setMaxMinZoomScalesForCurrentBounds()
+        }
         zoomScale = minimumZoomScale
         contentOffset = CGPointZero
     }
@@ -179,6 +187,7 @@ public class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         // fill width if the image and phone are both portrait or both landscape; otherwise take smaller scale
         let imagePortrait = imageSize.height > imageSize.width
         let phonePortrait = bounds.height >= bounds.width
+
         var minScale = (imagePortrait == phonePortrait) ? xScale : min(xScale, yScale)
         
         let maxScale = maxScaleFromMinScale*minScale
