@@ -11,7 +11,7 @@ import ZoomableScrollView
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var ZoomableScrollView: ZoomableScrollView!
+    @IBOutlet weak var zoomableScrollView: ZoomableScrollView!
     var images = [UIImage]()
     var index = 0
 
@@ -25,19 +25,19 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        ZoomableScrollView.imageContentMode = .aspectFit
-        ZoomableScrollView.initialOffset = .center
-        ZoomableScrollView.display(image: images[index])
+        zoomableScrollView.imageContentMode = .aspectFit
+        zoomableScrollView.initialOffset = .center
+        zoomableScrollView.display(image: images[index])
     }
 
     @IBAction func previousButtonTap(_ sender: AnyObject) {
         index = (index - 1 + images.count)%images.count
-        ZoomableScrollView.display(image: images[index])
+        zoomableScrollView.display(image: images[index])
     }
     
     @IBAction func nextButtonTap(_ sender: AnyObject) {
         index = (index + 1)%images.count
-        ZoomableScrollView.display(image: images[index])
+        zoomableScrollView.display(image: images[index])
     }
     
 }
