@@ -1,5 +1,5 @@
 //
-//  ImageScrollView.swift
+//  ZoomableScrollView.swift
 //  Beauty
 //
 //  Created by Nguyen Cong Huy on 1/19/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class ImageScrollView: UIScrollView {
+open class ZoomableScrollView: UIScrollView {
     
     @objc public enum ContentMode: Int {
         case aspectFill
@@ -71,7 +71,7 @@ open class ImageScrollView: UIScrollView {
         decelerationRate = UIScrollViewDecelerationRateFast
         delegate = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ImageScrollView.changeOrientationNotification), name: Notification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ZoomableScrollView.changeOrientationNotification), name: Notification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
     @objc public func adjustFrameToCenter() {
@@ -162,7 +162,7 @@ open class ImageScrollView: UIScrollView {
         zoomView!.isUserInteractionEnabled = true
         addSubview(zoomView!)
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ImageScrollView.doubleTapGestureRecognizer(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ZoomableScrollView.doubleTapGestureRecognizer(_:)))
         tapGesture.numberOfTapsRequired = 2
         zoomView!.addGestureRecognizer(tapGesture)
         
@@ -234,7 +234,7 @@ open class ImageScrollView: UIScrollView {
         }
         else {
             let center = gestureRecognizer.location(in: gestureRecognizer.view)
-            let zoomRect = zoomRectForScale(ImageScrollView.kZoomInFactorFromMinWhenDoubleTap * minimumZoomScale, center: center)
+            let zoomRect = zoomRectForScale(ZoomableScrollView.kZoomInFactorFromMinWhenDoubleTap * minimumZoomScale, center: center)
             zoom(to: zoomRect, animated: true)
         }
     }
@@ -243,7 +243,7 @@ open class ImageScrollView: UIScrollView {
         var zoomRect = CGRect.zero
         
         // the zoom rect is in the content view's coordinates.
-        // at a zoom scale of 1.0, it would be the size of the imageScrollView's bounds.
+        // at a zoom scale of 1.0, it would be the size of the ZoomableScrollView's bounds.
         // as the zoom scale decreases, so more content is visible, the size of the rect grows.
         zoomRect.size.height = frame.size.height / scale
         zoomRect.size.width  = frame.size.width  / scale
@@ -268,7 +268,7 @@ open class ImageScrollView: UIScrollView {
     }
 }
 
-extension ImageScrollView: UIScrollViewDelegate{
+extension ZoomableScrollView: UIScrollViewDelegate{
     
     public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return zoomView

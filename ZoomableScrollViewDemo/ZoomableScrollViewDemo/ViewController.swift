@@ -1,17 +1,17 @@
 //
 //  ViewController.swift
-//  ImageScrollViewDemo
+//  ZoomableScrollViewDemo
 //
 //  Created by Nguyen Cong Huy on 3/5/16.
 //  Copyright © 2016 Nguyen Cong Huy. All rights reserved.
 //
 
 import UIKit
-import ImageScrollView
+import ZoomableScrollView
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var imageScrollView: ImageScrollView!
+    @IBOutlet weak var ZoomableScrollView: ZoomableScrollView!
     var images = [UIImage]()
     var index = 0
 
@@ -27,19 +27,19 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        imageScrollView.imageContentMode = .aspectFit
-        imageScrollView.initialOffset = .center
-        imageScrollView.display(image: images[index])
+        ZoomableScrollView.imageContentMode = .aspectFit
+        ZoomableScrollView.initialOffset = .center
+        ZoomableScrollView.display(image: images[index])
     }
 
     @IBAction func previousButtonTap(_ sender: AnyObject) {
         index = (index - 1 + images.count)%images.count
-        imageScrollView.display(image: images[index])
+        ZoomableScrollView.display(image: images[index])
     }
     
     @IBAction func nextButtonTap(_ sender: AnyObject) {
         index = (index + 1)%images.count
-        imageScrollView.display(image: images[index])
+        ZoomableScrollView.display(image: images[index])
     }
     
 }

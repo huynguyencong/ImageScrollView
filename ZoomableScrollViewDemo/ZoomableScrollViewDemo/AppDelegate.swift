@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ImageScrollViewDemo
+//  ZoomableScrollViewDemo
 //
 //  Created by Nguyen Cong Huy on 3/5/16.
 //  Copyright © 2016 Nguyen Cong Huy. All rights reserved.
