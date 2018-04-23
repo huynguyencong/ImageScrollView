@@ -1,4 +1,4 @@
-# ImageScrollView
+# ZoomableScrollView
 
 A control to help you display an image, with zoomable and scrollable features easily.
 
