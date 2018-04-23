@@ -27,7 +27,7 @@ open class ZoomableScrollView: UIScrollView {
     @objc open var imageContentMode: ContentMode = .widthFill
     @objc open var initialOffset: Offset = .begining
     
-    @objc public private(set) var zoomView: UIImageView? = nil
+    @objc public private(set) var zoomView: UIView? = nil
 
     var imageSize: CGSize = CGSize.zero
     fileprivate var pointToCenterAfterResize: CGPoint = CGPoint.zero
@@ -152,13 +152,13 @@ open class ZoomableScrollView: UIScrollView {
 
     // MARK: - Display image
     
-    @objc open func display(image: UIImage) {
-
+    @objc open func display(view: UIView) {
+        
         if let zoomView = zoomView {
             zoomView.removeFromSuperview()
         }
         
-        zoomView = UIImageView(image: image)
+        zoomView = view
         zoomView!.isUserInteractionEnabled = true
         addSubview(zoomView!)
         
@@ -166,7 +166,14 @@ open class ZoomableScrollView: UIScrollView {
         tapGesture.numberOfTapsRequired = 2
         zoomView!.addGestureRecognizer(tapGesture)
         
-        configureImageForSize(image.size)
+        configureImageForSize(view.frame.size)
+        
+    }
+    
+    @objc open func display(image: UIImage) {
+        
+        display(view: UIImageView(image: image))
+        
     }
     
     fileprivate func configureImageForSize(_ size: CGSize) {
@@ -256,8 +263,8 @@ open class ZoomableScrollView: UIScrollView {
     }
     
     open func refresh() {
-        if let image = zoomView?.image {
-            display(image: image)
+        if let view = zoomView {
+            display(view: view)
         }
     }
     
