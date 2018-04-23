@@ -18,11 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 0..<5 {
-            if let image = UIImage(named: "dog-\(i).jpg") {
-                images.append(image)
-            }
-        }
+        let nameSet = ["dog-0.jpg", "dog-1.jpg", "dog-2.jpg", "dog-3.jpg", "dog-4.jpg", "IMG_7774.JPG"]
+        self.images = nameSet.compactMap { UIImage(named: $0) }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
