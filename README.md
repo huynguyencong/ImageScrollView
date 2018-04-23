@@ -25,7 +25,7 @@ and run below command in Terminal to install:
 Note: If above pod isn't working, try using below pod definition in Podfile:  
 `pod 'ZoomableScrollView', :git => 'https://github.com/tucan9389/ZoomableScrollView.git'`
 #### Manual
-In iOS 7, you cannot use Cocoapod to install. In this case, you need add it manually. Simply, add file `ImageSrollView.swift` in folder `Sources` to your project
+In iOS 7, you cannot use Cocoapod to install. In this case, you need add it manually. Simply, add file `ZoomableScrollView.swift` in folder `Sources` to your project
 
 #### Simple to use
 Drag an UIScrollView to your storyboard, change Class and Module in Identity Inspector to ZoomableScrollView. Also, create an IBOutlet in your source file.
@@ -41,12 +41,17 @@ import ZoomableScrollView
 ```
 
 ```
+let myView = MyCustomView()
+ZoomableScrollView.display(view: myView)
+```
+or
+```
 let myImage = UIImage(named: "my_image_name")
 ZoomableScrollView.display(image: myImage)
 ```
 That's all. Now try zooming and scrolling to see the result.
 
-Note: If your image is aligned left instead of center, try calling below method:
+Note: If your view is aligned left instead of center, try calling below method:
 
 ```superViewOfZoomableScrollView.layoutIfNeeded()```
 
