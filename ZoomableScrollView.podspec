@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ZoomableScrollView'
-  s.version      = '1.5'
+  s.version      = '1.6'
   s.summary      = 'A zoomable and scrollable view'
   s.homepage     = 'https://github.com/tucan9389/ZoomableScrollView'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
