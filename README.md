@@ -37,7 +37,7 @@ import ZoomableScrollView
 
 class ViewController: UIViewController
 
-    @IBOutlet weak var ZoomableScrollView: ZoomableScrollView!
+    @IBOutlet weak var zoomableScrollView: ZoomableScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
