@@ -34,20 +34,21 @@ Drag an UIScrollView to your storyboard, change Class and Module in Identity Ins
 
 ```swift
 import ZoomableScrollView
-```
 
-```swift
-@IBOutlet weak var ZoomableScrollView: ZoomableScrollView!
-```
+class ViewController: UIViewController
 
-```swift
-let myView = MyCustomView()
-ZoomableScrollView.display(view: myView)
-```
-or
-```swift
-let myImage = UIImage(named: "my_image_name")
-ZoomableScrollView.display(image: myImage)
+    @IBOutlet weak var ZoomableScrollView: ZoomableScrollView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let myView = MyCustomView()
+        zoomableScrollView.display(view: myView)
+        // or
+        let myImage = UIImage(named: "my_image_name")
+        zoomableScrollView.display(image: myImage)
+    }
+}
 ```
 That's all. Now try zooming and scrolling to see the result.
 
