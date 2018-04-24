@@ -38,7 +38,7 @@ In iOS 7, you cannot use Cocoapod to install. In this case, you need add it manu
 #### Simple to use
 Drag an UIScrollView to your storyboard, change Class and Module in Identity Inspector to ZoomableScrollView. Also, create an IBOutlet in your source file.
 
-![image](https://s3.amazonaws.com/tucan-images/ZoomableScrollView+storyboard.png)
+![image](https://s3.amazonaws.com/tucan-images/ZoomableScrollView-storyboard.png)
 
 ```swift
 import ZoomableScrollView
