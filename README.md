@@ -1,4 +1,9 @@
 # ZoomableScrollView
+<p align="center">
+    <a href=""><img src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
+    <a href=""><img src="https://img.shields.io/badge/swift-2.0+-orange.svg"></a>
+    <a href=""><img src="https://img.shields.io/badge/ios-8.0+-blue.svg"></a>
+</p>
 
 A control to help you display an view, with zoomable and scrollable features easily.
 
