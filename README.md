@@ -2,6 +2,9 @@
 
 A control to help you display an view, with zoomable and scrollable features easily.
 
+### DEMO
+![image](https://s3.amazonaws.com/tucan-images/ZoomableScrollViewDEMO.gif)
+
 ### About
 When you make an application, which has a photo viewer feature, the photo viewer usually needs to have zoomable and scrollable features, to allow the user to view more photo details.  
 This control help you display view, with zoomable and scrollable features easily.
