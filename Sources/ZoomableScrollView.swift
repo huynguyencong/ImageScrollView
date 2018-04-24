@@ -34,6 +34,37 @@ open class ZoomableScrollView: UIScrollView {
     fileprivate var scaleToRestoreAfterResize: CGFloat = 1.0
     var maxScaleFromMinScale: CGFloat = 3.0
     
+    
+    private var _maximumZoomScale: CGFloat? = nil
+    open override var maximumZoomScale: CGFloat {
+        get {
+            if let maximumZoomScale = self._maximumZoomScale {
+                return maximumZoomScale
+            } else {
+                return super.maximumZoomScale
+            }
+        }
+        set(newValue) {
+            self._maximumZoomScale = newValue
+            super.maximumZoomScale = newValue
+        }
+    }
+    private var _minimumZoomScale: CGFloat? = nil
+    open override var minimumZoomScale: CGFloat {
+        get {
+            if let minimumZoomScale = self._minimumZoomScale {
+                return minimumZoomScale
+            } else {
+                return super.minimumZoomScale
+            }
+        }
+        set(newValue) {
+            self._minimumZoomScale = newValue
+            super.minimumZoomScale = newValue
+        }
+    }
+    
+    
     override open var frame: CGRect {
         willSet {
             if frame.equalTo(newValue) == false && newValue.equalTo(CGRect.zero) == false && imageSize.equalTo(CGSize.zero) == false {
@@ -228,8 +259,8 @@ open class ZoomableScrollView: UIScrollView {
             minScale = maxScale
         }
         
-        maximumZoomScale = maxScale
-        minimumZoomScale = minScale * 0.999 // the multiply factor to prevent user cannot scroll page while they use this control in UIPageViewController
+        super.maximumZoomScale = _maximumZoomScale ?? maxScale
+        super.minimumZoomScale = (_minimumZoomScale ?? minScale) * 0.999 // the multiply factor to prevent user cannot scroll page while they use this control in UIPageViewController
     }
     
     // MARK: - Gesture
