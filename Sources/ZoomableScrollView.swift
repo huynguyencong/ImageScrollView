@@ -181,7 +181,7 @@ open class ZoomableScrollView: UIScrollView {
         return CGPoint.zero
     }
 
-    // MARK: - Display image
+    // MARK: - Display view
     
     @objc open func display(view: UIView) {
         
@@ -236,8 +236,8 @@ open class ZoomableScrollView: UIScrollView {
     
     fileprivate func setMaxMinZoomScalesForCurrentBounds() {
         // calculate min/max zoomscale
-        let xScale = bounds.width / contentSize.width    // the scale needed to perfectly fit the image width-wise
-        let yScale = bounds.height / contentSize.height   // the scale needed to perfectly fit the image height-wise
+        let xScale = bounds.width / contentSize.width    // the scale needed to perfectly fit the content view width-wise
+        let yScale = bounds.height / contentSize.height   // the scale needed to perfectly fit the content view height-wise
     
         var minScale: CGFloat = 1
         
@@ -257,7 +257,7 @@ open class ZoomableScrollView: UIScrollView {
         
         let maxScale = maxScaleFromMinScale*minScale
         
-        // don't let minScale exceed maxScale. (If the image is smaller than the screen, we don't want to force it to be zoomed.)
+        // don't let minScale exceed maxScale. (If the content view is smaller than the screen, we don't want to force it to be zoomed.)
         if minScale > maxScale {
             minScale = maxScale
         }
