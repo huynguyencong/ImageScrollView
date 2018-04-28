@@ -10,7 +10,8 @@ import UIKit
 
 open class ZoomableScrollView: UIScrollView {
     
-    @objc public enum ContentMode: Int {
+    @objc public enum ZoomMode: Int {
+        case defaultFit
         case aspectFill
         case aspectFit
         case widthFill
@@ -24,7 +25,7 @@ open class ZoomableScrollView: UIScrollView {
     
     static let kZoomInFactorFromMinWhenDoubleTap: CGFloat = 2
     
-    @objc open var imageContentMode: ContentMode = .widthFill
+    @objc open var zoomMode: ZoomMode = .aspectFit
     @objc open var initialOffset: Offset = .begining
     
     @objc public private(set) var contentView: UIView? = nil
@@ -218,7 +219,9 @@ open class ZoomableScrollView: UIScrollView {
             let xOffset = contentSize.width < bounds.width ? 0 : (contentSize.width - bounds.width)/2
             let yOffset = contentSize.height < bounds.height ? 0 : (contentSize.height - bounds.height)/2
 
-            switch imageContentMode {
+            switch zoomMode {
+            case .defaultFit:
+                contentOffset =  CGPoint.zero
             case .aspectFit:
                 contentOffset =  CGPoint.zero
             case .aspectFill:
@@ -238,7 +241,9 @@ open class ZoomableScrollView: UIScrollView {
     
         var minScale: CGFloat = 1
         
-        switch imageContentMode {
+        switch zoomMode {
+        case .defaultFit:
+            minScale = min(xScale, yScale) > 1 ? 1 : min(xScale, yScale)
         case .aspectFill:
             minScale = max(xScale, yScale)
         case .aspectFit:
