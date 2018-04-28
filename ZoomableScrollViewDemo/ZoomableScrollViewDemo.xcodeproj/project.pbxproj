@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5549AA1F20943C050085A5BB /* IMG_0004.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 5549AA1E20943C050085A5BB /* IMG_0004.JPG */; };
+		554C1FB72091BF5300627FC9 /* IMG_7774.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 554C1FB62091BF5300627FC9 /* IMG_7774.JPG */; };
 		6157A95D1C8B2E050088D051 /* dog-0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6157A9581C8B2E050088D051 /* dog-0.jpg */; };
 		6157A95E1C8B2E050088D051 /* dog-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6157A9591C8B2E050088D051 /* dog-1.jpg */; };
 		6157A95F1C8B2E050088D051 /* dog-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6157A95A1C8B2E050088D051 /* dog-2.jpg */; };
@@ -17,19 +19,21 @@
 		61F313881C8A04710096BF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F313861C8A04710096BF64 /* Main.storyboard */; };
 		61F3138A1C8A04710096BF64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61F313891C8A04710096BF64 /* Assets.xcassets */; };
 		61F3138D1C8A04710096BF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F3138B1C8A04710096BF64 /* LaunchScreen.storyboard */; };
-		E02C9B9990411837848B8AE1 /* Pods_ImageScrollViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A0FB7EA560B9F778B9A2EE /* Pods_ImageScrollViewDemo.framework */; };
+		E02C9B9990411837848B8AE1 /* Pods_ZoomableScrollViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A0FB7EA560B9F778B9A2EE /* Pods_ZoomableScrollViewDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0BFEAE319F2581E8B5EDD30B /* Pods-ImageScrollViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageScrollViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageScrollViewDemo/Pods-ImageScrollViewDemo.release.xcconfig"; sourceTree = "<group>"; };
-		52A0FB7EA560B9F778B9A2EE /* Pods_ImageScrollViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageScrollViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58D246FD3F219571C62065EE /* Pods-ImageScrollViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageScrollViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageScrollViewDemo/Pods-ImageScrollViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		0BFEAE319F2581E8B5EDD30B /* Pods-ZoomableScrollViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoomableScrollViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZoomableScrollViewDemo/Pods-ZoomableScrollViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		52A0FB7EA560B9F778B9A2EE /* Pods_ZoomableScrollViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoomableScrollViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5549AA1E20943C050085A5BB /* IMG_0004.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0004.JPG; sourceTree = "<group>"; };
+		554C1FB62091BF5300627FC9 /* IMG_7774.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_7774.JPG; sourceTree = "<group>"; };
+		58D246FD3F219571C62065EE /* Pods-ZoomableScrollViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoomableScrollViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoomableScrollViewDemo/Pods-ZoomableScrollViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6157A9581C8B2E050088D051 /* dog-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dog-0.jpg"; sourceTree = "<group>"; };
 		6157A9591C8B2E050088D051 /* dog-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dog-1.jpg"; sourceTree = "<group>"; };
 		6157A95A1C8B2E050088D051 /* dog-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dog-2.jpg"; sourceTree = "<group>"; };
 		6157A95B1C8B2E050088D051 /* dog-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dog-3.jpg"; sourceTree = "<group>"; };
 		6157A95C1C8B2E050088D051 /* dog-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dog-4.jpg"; sourceTree = "<group>"; };
-		61F3137F1C8A04710096BF64 /* ImageScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61F3137F1C8A04710096BF64 /* ZoomableScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomableScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F313821C8A04710096BF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61F313841C8A04710096BF64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		61F313871C8A04710096BF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E02C9B9990411837848B8AE1 /* Pods_ImageScrollViewDemo.framework in Frameworks */,
+				E02C9B9990411837848B8AE1 /* Pods_ZoomableScrollViewDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +59,7 @@
 		2CFCADA7D8E42A60443E5796 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52A0FB7EA560B9F778B9A2EE /* Pods_ImageScrollViewDemo.framework */,
+				52A0FB7EA560B9F778B9A2EE /* Pods_ZoomableScrollViewDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -68,15 +72,17 @@
 				6157A95A1C8B2E050088D051 /* dog-2.jpg */,
 				6157A95B1C8B2E050088D051 /* dog-3.jpg */,
 				6157A95C1C8B2E050088D051 /* dog-4.jpg */,
+				554C1FB62091BF5300627FC9 /* IMG_7774.JPG */,
+				5549AA1E20943C050085A5BB /* IMG_0004.JPG */,
 			);
 			name = Images;
-			path = ImageScrollViewDemo/Images;
+			path = ZoomableScrollViewDemo/Images;
 			sourceTree = "<group>";
 		};
 		61F313761C8A04710096BF64 = {
 			isa = PBXGroup;
 			children = (
-				61F313811C8A04710096BF64 /* ImageScrollViewDemo */,
+				61F313811C8A04710096BF64 /* ZoomableScrollViewDemo */,
 				6157A9571C8B2DF60088D051 /* Images */,
 				61F313801C8A04710096BF64 /* Products */,
 				92D6AE927D01E89282D8D494 /* Pods */,
@@ -87,12 +93,12 @@
 		61F313801C8A04710096BF64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61F3137F1C8A04710096BF64 /* ImageScrollViewDemo.app */,
+				61F3137F1C8A04710096BF64 /* ZoomableScrollViewDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		61F313811C8A04710096BF64 /* ImageScrollViewDemo */ = {
+		61F313811C8A04710096BF64 /* ZoomableScrollViewDemo */ = {
 			isa = PBXGroup;
 			children = (
 				61F313821C8A04710096BF64 /* AppDelegate.swift */,
@@ -102,7 +108,7 @@
 				61F3138B1C8A04710096BF64 /* LaunchScreen.storyboard */,
 				61F3138E1C8A04710096BF64 /* Info.plist */,
 			);
-			path = ImageScrollViewDemo;
+			path = ZoomableScrollViewDemo;
 			sourceTree = "<group>";
 		};
 		92D6AE927D01E89282D8D494 /* Pods */ = {
@@ -110,8 +116,8 @@
 			children = (
 				7B5BA4BEA28F0ABFBED66522 /* Pods.debug.xcconfig */,
 				ABEA9732278037A45B8BB744 /* Pods.release.xcconfig */,
-				58D246FD3F219571C62065EE /* Pods-ImageScrollViewDemo.debug.xcconfig */,
-				0BFEAE319F2581E8B5EDD30B /* Pods-ImageScrollViewDemo.release.xcconfig */,
+				58D246FD3F219571C62065EE /* Pods-ZoomableScrollViewDemo.debug.xcconfig */,
+				0BFEAE319F2581E8B5EDD30B /* Pods-ZoomableScrollViewDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -119,24 +125,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		61F3137E1C8A04710096BF64 /* ImageScrollViewDemo */ = {
+		61F3137E1C8A04710096BF64 /* ZoomableScrollViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61F313911C8A04710096BF64 /* Build configuration list for PBXNativeTarget "ImageScrollViewDemo" */;
+			buildConfigurationList = 61F313911C8A04710096BF64 /* Build configuration list for PBXNativeTarget "ZoomableScrollViewDemo" */;
 			buildPhases = (
 				9330F1AC23541D45F916ABB9 /* [CP] Check Pods Manifest.lock */,
 				61F3137B1C8A04710096BF64 /* Sources */,
 				61F3137C1C8A04710096BF64 /* Frameworks */,
 				61F3137D1C8A04710096BF64 /* Resources */,
 				96B1EA2E91EDF0C09241896B /* [CP] Embed Pods Frameworks */,
-				4D60B11FB163133BA0F38255 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ImageScrollViewDemo;
-			productName = ImageScrollViewDemo;
-			productReference = 61F3137F1C8A04710096BF64 /* ImageScrollViewDemo.app */;
+			name = ZoomableScrollViewDemo;
+			productName = ZoomableScrollViewDemo;
+			productReference = 61F3137F1C8A04710096BF64 /* ZoomableScrollViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,16 +151,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Nguyen Cong Huy";
 				TargetAttributes = {
 					61F3137E1C8A04710096BF64 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5WXJ4Z4H69;
 						LastSwiftMigration = 0900;
 					};
 				};
 			};
-			buildConfigurationList = 61F3137A1C8A04710096BF64 /* Build configuration list for PBXProject "ImageScrollViewDemo" */;
+			buildConfigurationList = 61F3137A1C8A04710096BF64 /* Build configuration list for PBXProject "ZoomableScrollViewDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -168,7 +174,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				61F3137E1C8A04710096BF64 /* ImageScrollViewDemo */,
+				61F3137E1C8A04710096BF64 /* ZoomableScrollViewDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -181,7 +187,9 @@
 				61F3138D1C8A04710096BF64 /* LaunchScreen.storyboard in Resources */,
 				6157A9611C8B2E050088D051 /* dog-4.jpg in Resources */,
 				6157A95F1C8B2E050088D051 /* dog-2.jpg in Resources */,
+				5549AA1F20943C050085A5BB /* IMG_0004.JPG in Resources */,
 				61F3138A1C8A04710096BF64 /* Assets.xcassets in Resources */,
+				554C1FB72091BF5300627FC9 /* IMG_7774.JPG in Resources */,
 				61F313881C8A04710096BF64 /* Main.storyboard in Resources */,
 				6157A9601C8B2E050088D051 /* dog-3.jpg in Resources */,
 				6157A95D1C8B2E050088D051 /* dog-0.jpg in Resources */,
@@ -192,21 +200,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4D60B11FB163133BA0F38255 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageScrollViewDemo/Pods-ImageScrollViewDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9330F1AC23541D45F916ABB9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,7 +211,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ImageScrollViewDemo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ZoomableScrollViewDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -231,16 +224,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ImageScrollViewDemo/Pods-ImageScrollViewDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ImageScrollView/ImageScrollView.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZoomableScrollViewDemo/Pods-ZoomableScrollViewDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ZoomableScrollView/ZoomableScrollView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZoomableScrollView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageScrollViewDemo/Pods-ImageScrollViewDemo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZoomableScrollViewDemo/Pods-ZoomableScrollViewDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -289,12 +282,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -343,12 +338,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -381,14 +378,15 @@
 		};
 		61F313921C8A04710096BF64 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58D246FD3F219571C62065EE /* Pods-ImageScrollViewDemo.debug.xcconfig */;
+			baseConfigurationReference = 58D246FD3F219571C62065EE /* Pods-ZoomableScrollViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ImageScrollViewDemo/Info.plist;
+				DEVELOPMENT_TEAM = 5WXJ4Z4H69;
+				INFOPLIST_FILE = ZoomableScrollViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nch.ImageScrollViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nch.ZoomableScrollViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -397,14 +395,15 @@
 		};
 		61F313931C8A04710096BF64 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BFEAE319F2581E8B5EDD30B /* Pods-ImageScrollViewDemo.release.xcconfig */;
+			baseConfigurationReference = 0BFEAE319F2581E8B5EDD30B /* Pods-ZoomableScrollViewDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ImageScrollViewDemo/Info.plist;
+				DEVELOPMENT_TEAM = 5WXJ4Z4H69;
+				INFOPLIST_FILE = ZoomableScrollViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nch.ImageScrollViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nch.ZoomableScrollViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -414,7 +413,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		61F3137A1C8A04710096BF64 /* Build configuration list for PBXProject "ImageScrollViewDemo" */ = {
+		61F3137A1C8A04710096BF64 /* Build configuration list for PBXProject "ZoomableScrollViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61F3138F1C8A04710096BF64 /* Debug */,
@@ -423,7 +422,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61F313911C8A04710096BF64 /* Build configuration list for PBXNativeTarget "ImageScrollViewDemo" */ = {
+		61F313911C8A04710096BF64 /* Build configuration list for PBXNativeTarget "ZoomableScrollViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61F313921C8A04710096BF64 /* Debug */,

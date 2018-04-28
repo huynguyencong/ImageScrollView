@@ -1,0 +1,16 @@
+PODS:
+  - ZoomableScrollView (1.5)
+
+DEPENDENCIES:
+  - ZoomableScrollView (from `../`)
+
+EXTERNAL SOURCES:
+  ZoomableScrollView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZoomableScrollView: 8da861c96879f9204406e4a5764352fb3628df84
+
+PODFILE CHECKSUM: e70715e8df2d74dc7a4233417c8ebcb6ac9fea3e
+
+COCOAPODS: 1.5.0
