@@ -202,9 +202,7 @@ open class ZoomableScrollView: UIScrollView {
     }
     
     @objc open func display(image: UIImage) {
-        
         display(view: UIImageView(image: image))
-        
     }
     
     fileprivate func configureContentForSize(_ size: CGSize) {
