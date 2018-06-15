@@ -22,10 +22,18 @@ open class ImageScrollView: UIScrollView {
         case center
     }
     
+    @objc public enum ImagePosition: Int {
+        case top
+        case center
+    }
+    
     static let kZoomInFactorFromMinWhenDoubleTap: CGFloat = 2
     
     @objc open var imageContentMode: ContentMode = .widthFill
     @objc open var initialOffset: Offset = .begining
+    @objc open var imagePosition: ImagePosition = .center
+    @objc open var orientationIsLocked: Bool = false
+    @objc open var onSingleTap: (() -> Void)?
     
     @objc public private(set) var zoomView: UIImageView? = nil
 
@@ -90,12 +98,17 @@ open class ImageScrollView: UIScrollView {
             frameToCenter.origin.x = 0
         }
         
-        // center vertically
-        if frameToCenter.size.height < bounds.height {
-            frameToCenter.origin.y = (bounds.height - frameToCenter.size.height) / 2
-        }
-        else {
+        // align vertically
+        switch imagePosition {
+        case .top:
             frameToCenter.origin.y = 0
+        case .center:
+            if frameToCenter.size.height < bounds.height {
+                frameToCenter.origin.y = (bounds.height - frameToCenter.size.height) / 2
+            }
+            else {
+                frameToCenter.origin.y = 0
+            }
         }
         
         unwrappedZoomView.frame = frameToCenter
@@ -162,11 +175,23 @@ open class ImageScrollView: UIScrollView {
         zoomView!.isUserInteractionEnabled = true
         addSubview(zoomView!)
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ImageScrollView.doubleTapGestureRecognizer(_:)))
-        tapGesture.numberOfTapsRequired = 2
-        zoomView!.addGestureRecognizer(tapGesture)
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ImageScrollView.singleTapGestureRecognizer(_:)))
+        singleTapGesture.numberOfTapsRequired = 1
+        zoomView!.addGestureRecognizer(singleTapGesture)
+        
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ImageScrollView.doubleTapGestureRecognizer(_:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        zoomView!.addGestureRecognizer(doubleTapGesture)
+        
+        singleTapGesture.require(toFail: doubleTapGesture)
         
         configureImageForSize(image.size)
+    }
+    
+    @objc open func updatePosition() {
+        if let image = zoomView?.image {
+            configureImageForSize(image.size)
+        }
     }
     
     fileprivate func configureImageForSize(_ size: CGSize) {
@@ -226,13 +251,19 @@ open class ImageScrollView: UIScrollView {
     }
     
     // MARK: - Gesture
+    @objc func singleTapGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) {
+        // zoom out if it bigger than middle scale point.
+        if zoomScale >= maximumZoomScale / 2.0 {
+            setZoomScale(minimumZoomScale, animated: true)
+        }
+        onSingleTap?()
+    }
     
     @objc func doubleTapGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) {
         // zoom out if it bigger than middle scale point. Else, zoom in
         if zoomScale >= maximumZoomScale / 2.0 {
             setZoomScale(minimumZoomScale, animated: true)
-        }
-        else {
+        } else {
             let center = gestureRecognizer.location(in: gestureRecognizer.view)
             let zoomRect = zoomRectForScale(ImageScrollView.kZoomInFactorFromMinWhenDoubleTap * minimumZoomScale, center: center)
             zoom(to: zoomRect, animated: true)
@@ -264,7 +295,9 @@ open class ImageScrollView: UIScrollView {
     // MARK: - Actions
     
     @objc func changeOrientationNotification() {
-        configureImageForSize(imageSize)
+        if !orientationIsLocked {
+            configureImageForSize(imageSize)
+        }
     }
 }
 
