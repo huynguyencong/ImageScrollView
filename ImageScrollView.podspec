@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ImageScrollView'
-  s.version      = '1.5'
+  s.version      = '1.6'
   s.summary      = 'Zoomable and scrollable image view'
   s.homepage     = 'https://github.com/huynguyencong/ImageScrollView'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
