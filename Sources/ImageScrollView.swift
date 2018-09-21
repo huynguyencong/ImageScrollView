@@ -10,7 +10,7 @@ import UIKit
 
 open class ImageScrollView: UIScrollView {
     
-    @objc public enum ContentMode: Int {
+    @objc public enum ISVContentMode: Int {
         case aspectFill
         case aspectFit
         case widthFill
@@ -24,7 +24,7 @@ open class ImageScrollView: UIScrollView {
     
     static let kZoomInFactorFromMinWhenDoubleTap: CGFloat = 2
     
-    @objc open var imageContentMode: ContentMode = .widthFill
+    @objc open var imageContentMode: ISVContentMode = .widthFill
     @objc open var initialOffset: Offset = .begining
     
     @objc public private(set) var zoomView: UIImageView? = nil
